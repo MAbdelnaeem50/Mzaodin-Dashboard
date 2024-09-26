@@ -13,7 +13,7 @@
         <input 
           type="text" 
           placeholder="قم بكتابة اسم المنتج" 
-          class="w-full px-8 py-2 border border-gray-200  rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full px-8 py-2 border border-gray-200  rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-300"
         />
       </div>
   
@@ -23,7 +23,7 @@
         <input 
           type="text" 
           placeholder="قم بكتابة تفاصيل المنتج" 
-          class="w-full px-8 py-2 border border-gray-200  rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full px-8 py-2 border border-gray-200  rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-300"
         />
       </div>
   
@@ -33,12 +33,12 @@
         <input 
           type="text" 
           placeholder="قم بكتابة رمز المنتج" 
-          class="w-full px-8 py-2 border border-gray-200  rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full px-8 py-2 border border-gray-200  rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-300"
         />
       </div>
   
       <!-- Radio Buttons -->
-      <ul class="grid w-1/2 gap-6 md:grid-cols-2 mb-4 ">
+      <ul class="grid w-1/2 gap-6 grid-cols-2 mb-4 ">
     <li>
         <input type="radio" id="hosting-small" name="hosting" value="hosting-small" class="hidden peer" required />
         <label for="hosting-small"  class="inline-flex items-center justify-between w-full px-5 py-3 text-gray-500 bg-white border border-gray-200 rounded-3xl cursor-pointer   peer-checked:bg-blue-600 peer-checked:text-gray-100 hover:text-gray-600 hover:bg-gray-100 ">                           
@@ -74,7 +74,7 @@
         <input 
           type="text" 
           placeholder="قم بكتابة سعر المنتج التقديري" 
-          class="w-full px-8 py-2 border border-gray-200  rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full px-8 py-2 border border-gray-200  rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-300"
         />
       </div>
   
@@ -84,19 +84,19 @@
         <input 
           type="text" 
           placeholder="قم بكتابة الوزن" 
-          class="w-full px-8 py-2 border border-gray-200  rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+          class="w-full px-8 py-2 border border-gray-200  rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-300"
         />
       </div>
   
       <!-- Buttons -->
       <div class="flex justify-between">
         <button 
-          class="bg-blue-500 text-white w-3/4 lg:ml-4 px-4 py-3 rounded-3xl focus:outline-none hover:bg-blue-600"
+          class="bg-blue-500 text-white w-3/4 cml-4 px-4 py-3 rounded-3xl focus:outline-none hover:bg-blue-600"
         >
           نشر
         </button>
         <button 
-          class="bg-red-500 text-white w-1/4 lg:mr-4 px-4 py-3 rounded-3xl focus:outline-none hover:bg-red-600"
+          class="bg-red-500 text-white w-1/4 mr-4 px-4 py-3 rounded-3xl focus:outline-none hover:bg-red-600"
         >
           إلغاء
         </button>

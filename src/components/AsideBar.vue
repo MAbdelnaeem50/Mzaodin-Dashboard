@@ -9,7 +9,7 @@
     <i v-else class="fa-solid fa-xmark text-2xl py-2 px-4 rounded-lg bg-gray-200 text-blue-600"></i>
     </button>
     <aside :class="[
-      'fixed top-0 right-0 h-full w-64 bg-gray-100  rounded-l-3xl transition-transform duration-300 ease-in-out p-5 z-40',
+      'fixed top-0 right-0 h-full w-64 bg-white border-2  border-gray-100 shadow-lg rounded-l-3xl transition-transform duration-300 ease-in-out p-5 z-40',
       isOpen ? 'translate-x-0' : 'translate-x-full'
     ]">
       <div class="mt-12  lg:mt-0 flex flex-col items-center py-20">
@@ -20,9 +20,9 @@
               <router-link :to="item.path" custom v-slot="{ href, navigate, isActive }">
                 <a :href="href" @click="navigate" :class="[
                   'flex items-center px-8 py-3 mb-4 rounded-3xl transition-colors',
-                  isActive 
-                    ? 'text-blue-500 bg-gray-200' 
-                    : 'text-gray-500 hover:bg-blue-500 hover:text-white'
+                  isMenuItemActive(item.path, isActive)
+                    ? 'text-white bg-blue-500' 
+                    : 'text-blue-500 hover:bg-blue-500 hover:text-white'
                 ]">
                   <i :class="['ml-3', item.icon]"></i>
                   <span>{{ item.label }}</span>
@@ -31,12 +31,15 @@
             </li>
           </ul>
           <ul class="space-y-2 absolute bottom-10 left-0 right-0 px-4">
-            <li>
+            <router-link to="/settings">
+              <li>
               <a href="#" class="flex items-center px-8 py-3 mb-4 text-gray-500    rounded-3xl hover:bg-blue-500 hover:text-white transition-colors">
                 <i class="fa-solid fa-gear ml-3"></i>
                 <span> الاعدادات</span>
               </a>
             </li>
+            </router-link>
+  
             <router-link to="/" >
               <li >
               <a href="#" class="flex items-center px-8 py-3 mb-4 text-white bg-red-500  rounded-3xl hover:bg-red-400 hover:text-white transition-colors">
@@ -75,6 +78,21 @@ export default {
     handleResize() {
       this.screenWidth = window.innerWidth;
       this.isOpen = this.screenWidth >= 1024;
+    },
+    isMenuItemActive(path, isActive) {
+      if (path === '/products') {
+        return isActive || 
+        this.$route.path === '/create-product' || 
+        this.$route.path === '/details-product';
+      }
+      if (path === '/auctions') {
+        return isActive || 
+               this.$route.path === '/create-auction' || 
+               this.$route.path === '/ending-auction' || 
+               this.$route.path === '/current-auction'|| 
+               this.$route.path === '/incoming-auction';
+      }
+      return isActive;
     },
   },
   mounted() {

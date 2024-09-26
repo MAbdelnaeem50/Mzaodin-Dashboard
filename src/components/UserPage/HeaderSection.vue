@@ -5,8 +5,8 @@
         <div class="grid lg:grid-cols-3 grid-cols-1  items-center w-full mb-20">
         <div class="stats  ml-4 bg-blue-100 shadow-lg mb-4 ">
           <div dir="ltr" class="stat px-16  py-6 ">
-            <div class="stat-value">190</div>
-            <div class="stat-title">الاعضاء</div>
+            <div class="stat-value text-right mr-2">190</div>
+            <div class="stat-title text-right mr-2">الاعضاء</div>
             <div class="stat-figure text-secondary">
               <div class="avatar">
                 <div class="w-16 bg-blue-300 rounded-full ml-4">
